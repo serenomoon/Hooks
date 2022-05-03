@@ -23,6 +23,7 @@ describe('Test < TodoList />', () => {
     test('should have 2 < TodoListItems />s', () => {
         
         expect( wrapper.find('TodoListItem').length ).toBe( demoTodos.length );
+        expect( wrapper.find('TodoListItem').at(0).prop('handleDelete') ).toEqual( expect.any(Function) );
 
     });
 
